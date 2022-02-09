@@ -202,9 +202,10 @@ public class Prueba {
 
 	@Override
 	public String toString() {
-		return "Prueba [id=" + id + ", nombre=" + nombre + ", fecha=" + fecha + ", individual=" + individual
-				+ ", lugar=" + lugar + ", arbitraje=" + Arrays.toString(arbitraje) + ", resultado=" + resultado
-				+ ", participantes=" + Arrays.toString(participantes) + "]";
+		return id + "." + nombre + " (" + fecha + "en" + lugar + 
+				 ") de tipo" + individual;
+		
+		
 	}
 
 	// Ejercicio 2, parte B

@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Usut09/git/Examen5/Federacion_Xuaquin/libs/valnif.jar">
+	<classpathentry exported="true" kind="lib" path="libs/valnif.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

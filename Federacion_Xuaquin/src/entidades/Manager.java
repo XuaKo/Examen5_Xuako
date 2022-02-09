@@ -107,6 +107,10 @@ public class Manager {
 		} while (!valido);
 	}
 
+	public String data() {
+		return persona.getId() + "|" + persona.getNombre() + "|" + persona.getNifnie() + "|" + persona.getFechaNac() +"|" + persona.getTelefono() + "|" + id + "|" + telefono + "|" + direccion;
+	}
+	
 	@Override
 	public String toString() {
 		return id + DatosPersona.nuevaPersona().getNombre() + " (" + DatosPersona.nuevaPersona().getNifnie() + ") del año" + DatosPersona.nuevaPersona().getFechaNac().getYear() + " telf 1: " + telefono + " telf 2: " + DatosPersona.nuevaPersona().getTelefono();

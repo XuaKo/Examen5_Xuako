@@ -20,5 +20,10 @@
 			<type>2</type>
 			<location>C:/Users/luis/git/federacion/Federacion_SOL/libs</location>
 		</link>
+		<link>
+			<name>libs/valnif.jar</name>
+			<type>1</type>
+			<location>C:/Users/usut09/Downloads/valnif.jar</location>
+		</link>
 	</linkedResources>
 </projectDescription>
