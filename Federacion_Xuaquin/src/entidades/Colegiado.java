@@ -87,5 +87,5 @@ public class Colegiado {
 		return id + DatosPersona.nuevaPersona().getNombre() + DatosPersona.nuevaPersona().getNifnie() + " nacido el " +
 				DatosPersona.nuevaPersona().getFechaNac().getYear() + ",tfno: " + DatosPersona.nuevaPersona().getTelefono() + "CAT= " + categoria;
 	}
-
+	
 }
