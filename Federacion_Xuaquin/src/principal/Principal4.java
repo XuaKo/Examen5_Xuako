@@ -1,5 +1,10 @@
 package principal;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 import entidades.*;
@@ -374,8 +379,71 @@ public class Principal4 {
 	}
 
 	private static boolean login(Credenciales cred) {
-		// Por el momento siempre devolverÃ¡ true
+		
 		return true;
 	}
-
+	public static void exportarColegiadosJunior() {
+		String path = "colegiadosjuniors.dat";
+		try {
+			FileOutputStream fichero = new FileOutputStream(path, false); 
+			
+			ObjectOutputStream escritor = new ObjectOutputStream(fichero);
+			for (Colegiado c : Datos.COLEGIADOS) {
+				if (c.getCategoria().equals(Categoria.JUNIOR)) {
+					escritor.writeObject((Colegiado) c);
+					escritor.flush();
+				}
+			}
+			escritor.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("Se ha producido una FileNotFoundException" + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Se ha producido una IOException" + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Se ha producido una Exception" + e.getMessage());
+		}
+	}
+	
+	public static void exportarColegiadosSenior() {
+		String path = "colegiadossenior.dat";
+		try {
+			FileOutputStream fichero = new FileOutputStream(path, false); 
+			
+			ObjectOutputStream escritor = new ObjectOutputStream(fichero);
+			for (Colegiado c : Datos.COLEGIADOS) {
+				if (c.getCategoria().equals(Categoria.SENIOR)) {
+					escritor.writeObject((Colegiado) c);
+					escritor.flush();
+				}
+			}
+			escritor.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("Se ha producido una FileNotFoundException" + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Se ha producido una IOException" + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Se ha producido una Exception" + e.getMessage());
+		}
+	}
+	public static void exportarColegiadosEspecial() {
+		String path = "colegiadosespecial.dat";
+		try {
+			FileOutputStream fichero = new FileOutputStream(path, false); 
+			
+			ObjectOutputStream escritor = new ObjectOutputStream(fichero);
+			for (Colegiado c : Datos.COLEGIADOS) {
+				if (c.getCategoria().equals(Categoria.ESPECIAL)) {
+					escritor.writeObject((Colegiado) c);
+					escritor.flush();
+				}
+			}
+			escritor.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("Se ha producido una FileNotFoundException" + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Se ha producido una IOException" + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Se ha producido una Exception" + e.getMessage());
+		}
+	}
 }
